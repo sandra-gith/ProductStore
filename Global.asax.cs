@@ -19,9 +19,9 @@ namespace ProductStore
         {
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
+            GlobalConfiguration.Configure(WebApiConfig.Register); //ToDo: Tener en cuenta que: Es necesario configurar la api primero, ahí se registran las rutas y como son mas especificas que las de los controladores MVC deben ir primero.
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
-            GlobalConfiguration.Configure(WebApiConfig.Register);
             System.Data.Entity.Database.SetInitializer(
             new ProductStore.Models.OrdersContextInitializer());
         }

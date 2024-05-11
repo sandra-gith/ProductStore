@@ -19,11 +19,12 @@ namespace ProductStore
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
 
-            routes.MapRoute(
-                name: "Defaultaa",
-                url: "api/{controller}",
-                defaults: new { id = UrlParameter.Optional }
-            );
+            //ToDo: No se requiere definir las rutas de la api aquí, ya lo estas haciendo el el archivo WebApiConfig.cs
+            //routes.MapRoute(
+            //    name: "Defaultaa",
+            //    url: "api/{controller}",
+            //    defaults: new { id = UrlParameter.Optional }
+            //);
         }
     }
 }
